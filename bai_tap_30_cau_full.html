@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập tiếng Việt - 30 câu điền từ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      font-size: 28px;
+      color: #333;
+    }
+    li {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      font-size: 16px;
+      padding: 5px;
+      width: 300px;
+    }
+    .dap-an {
+      margin-top: 30px;
+      padding: 15px;
+      background: #eef;
+      border: 1px solid #ccd;
+      display: none;
+    }
+  </style>
+  <script>
+    function chấmĐiểm() {
+      const đápÁn = [
+        "gì", "gì", "gì", "gì", "gì", "gì", "gì", "gì",
+        "nào", "gì", "nào", "gì", "nào", "gì",
+        "hãy", "rồi hãy", "hãy", "rồi hãy", "rồi hãy", "rồi hãy",
+        "Cả", "lẫn", "cả", "cả", "lẫn", "cả",
+        "Khi nào", "Khi nào", "Khi nào", "Khi nào"
+      ];
+      let điểm = 0;
+      for (let i = 0; i < đápÁn.length; i++) {
+        const trảLời = document.getElementById("q" + (i+1)).value.trim().toLowerCase();
+        if (trảLời === đápÁn[i].toLowerCase()) {
+          điểm++;
+        }
+      }
+
+      document.getElementById("kq").innerHTML = "<strong>Bạn được " + điểm + "/" + đápÁn.length + " điểm.</strong>";
+      let chiTiet = "<ol>";
+      for (let i = 0; i < đápÁn.length; i++) {
+        const userAns = document.getElementById("q" + (i+1)).value.trim();
+        chiTiet += "<li>Câu " + (i+1) + ": Đáp án đúng là <strong>" + đápÁn[i] + "</strong>. ";
+        chiTiet += "Bạn trả lời: <em>" + (userAns ? userAns : " (bỏ trống)") + "</em></li>";
+      }
+      chiTiet += "</ol>";
+      document.getElementById("chiTiet").innerHTML = chiTiet;
+      document.getElementById("dapAn").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>Bài tập tiếng Việt - Điền từ vào chỗ trống (30 câu)</h1>
+  <form onsubmit="event.preventDefault(); chấmĐiểm();">
+    <ol>
+      <li>Phim ___ Nam cũng thích xem. <br><input type="text" id="q1"></li>
+      <li>Xe ___ chị Lan cũng biết lái. <br><input type="text" id="q2"></li>
+      <li>Món ăn ___ ở miền Trung cũng cay. <br><input type="text" id="q3"></li>
+      <li>Môn ___ khi học trung học anh ấy cũng giỏi. <br><input type="text" id="q4"></li>
+      <li>Sinh tố ___ cô ấy cũng thích. <br><input type="text" id="q5"></li>
+      <li>Việc ___ có tiền ông ấy cũng làm. <br><input type="text" id="q6"></li>
+      <li>Quần áo ___ khi đi chơi với bạn em cũng có thể mặc. <br><input type="text" id="q7"></li>
+      <li>Anh ta nói ___ cũng đúng. <br><input type="text" id="q8"></li>
+      <li>Anh Nam sinh vào ngày ___? <br><input type="text" id="q9"></li>
+      <li>Em muốn ăn ___? <br><input type="text" id="q10"></li>
+      <li>Lan thích điện thoại ___ hơn, Samsung hay Sony? <br><input type="text" id="q11"></li>
+      <li>Sáng nay có chuyện ___ mà văn phòng đông người thế? <br><input type="text" id="q12"></li>
+      <li>Anh nghĩ em nên chọn công việc ___: lương cao hay hợp chuyên môn? <br><input type="text" id="q13"></li>
+      <li>Con vật ___ không bao giờ uống nước vậy? <br><input type="text" id="q14"></li>
+      <li>Em ___ tập thể dục đi. <br><input type="text" id="q15"></li>
+      <li>Em suy nghĩ kỹ ___ đi chơi xa với bạn. <br><input type="text" id="q16"></li>
+      <li>Các em ___ giữ gìn vệ sinh lớp học nhé. <br><input type="text" id="q17"></li>
+      <li>Em tìm kỹ ___ hỏi chị. <br><input type="text" id="q18"></li>
+      <li>Em suy nghĩ kỹ ___ nói. <br><input type="text" id="q19"></li>
+      <li>Bạn tắt đèn ___ khóa cửa trước khi ra về nhé. <br><input type="text" id="q20"></li>
+      <li>___ anh Hải lẫn vợ anh ấy đều là bạn tôi. <br><input type="text" id="q21"></li>
+      <li>Cả cái áo dài đỏ ___ cái váy xanh đều đẹp. Tôi không chọn được. <br><input type="text" id="q22"></li>
+      <li>Ở khu vực này, xe cộ ồn ào ___ ngày lẫn đêm. <br><input type="text" id="q23"></li>
+      <li>Anh ấy giỏi ___ ngoại ngữ lẫn IT. <br><input type="text" id="q24"></li>
+      <li>Cả bố tôi ___ mẹ tôi đều quý anh ấy. <br><input type="text" id="q25"></li>
+      <li>Để ___ nấu ăn lẫn dọn dẹp nhà cửa, tôi mất 2 tiếng đồng hồ. <br><input type="text" id="q26"></li>
+      <li>___ con học xong bài thì bố sẽ cho con ăn kem. <br><input type="text" id="q27"></li>
+      <li>___ con chơi xong, con sẽ dọn ạ. <br><input type="text" id="q28"></li>
+      <li>___ mình có tiền, anh sẽ mua cái mới. <br><input type="text" id="q29"></li>
+      <li>___ có dịp, tôi sẽ đi thử. <br><input type="text" id="q30"></li>
+
+    </ol>
+    <button type="submit">Chấm điểm</button>
+  </form>
+
+  <div id="dapAn" class="dap-an">
+    <div id="kq"></div>
+    <div id="chiTiet"></div>
+  </div>
+</body>
+</html>
